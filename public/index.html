@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="/styles/style.css">
     </head>
     <body class="bg-white">
 
@@ -89,14 +90,14 @@
                 <header>
                     <nav class="bg-white border-b border-gray-200" aria-label="Global">
                         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                            <div class="relative flex h-16 items-center justify-between">
+                            <div class="flex h-16 items-center justify-between">
 
-                                <!-- Burger mobile -->
-                                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                                <!-- Logo -->
+                                <div class="flex shrink-0 items-center">
                                     <button
                                         id="burger-btn"
                                         type="button"
-                                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-500 hover:bg-gray-100 focus:outline-none">
+                                        class="inline-flex items-center justify-center rounded-md p-2 text-gray-500 hover:bg-gray-100 focus:outline-none sm:hidden mr-2">
                                         <span class="sr-only">Open main menu</span>
                                         <svg id="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-6">
                                             <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -105,34 +106,29 @@
                                             <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </button>
+                                    <img src="/assets/images/talknotes.png" alt="TalkNotes" class="h-8 w-auto" />
                                 </div>
 
-                                <!-- Logo + liens desktop -->
-                                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                                    <div class="flex shrink-0 items-center">
-                                        <img src="/assets/images/talknotes.png" alt="TalkNotes" class="h-8 w-auto" />
-                                    </div>
-                                    <div class="hidden sm:ml-6 sm:block">
-                                        <div class="flex space-x-1">
-                                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900">Try it</a>
-                                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900">How it works</a>
-                                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900">Use cases</a>
-                                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900">Pricing</a>
-                                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900">FAQ</a>
-                                        </div>
+                                <!-- Liens desktop -->
+                                <div class="hidden sm:block">
+                                    <div class="flex space-x-1">
+                                        <a href="#" class="rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900">Try it</a>
+                                        <a href="#" class="rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900">How it works</a>
+                                        <a href="#" class="rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900">Use cases</a>
+                                        <a href="#" class="rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900">Pricing</a>
+                                        <a href="#" class="rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900">FAQ</a>
                                     </div>
                                 </div>
 
                                 <!-- CTA droite -->
-                                <div class="flex items-center gap-3 absolute inset-y-0 right-0 sm:static sm:inset-auto sm:ml-6 sm:pr-0 pr-2">
-                                    <a href="#" class="rounded-lg bg-blue-100 hidden sm:block rounded-md px-3 py-2 text-sm font-medium text-indigo-600 hover:text-indigo-700">Login</a>
+                                <div class="flex items-center gap-3">
+                                    <a href="#" class="rounded-lg bg-blue-100 hidden sm:block rounded-md px-3 py-2 text-base font-medium text-indigo-600 hover:text-indigo-700">Login</a>
                                     <button
                                         onclick="document.getElementById('popup-overlay').classList.remove('hidden')"
-                                        class="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-bold text-white hover:bg-indigo-700 transition-colors whitespace-nowrap">
+                                        class="rounded-lg bg-indigo-600 px-4 py-2 text-base font-bold text-white hover:bg-indigo-700 transition-colors whitespace-nowrap">
                                         → Get Talknotes +
                                     </button>
                                 </div>
-
                             </div>
                         </div>
 
@@ -153,156 +149,119 @@
             <!-- ============================================================ -->
             <!-- BLOC 2 — HERO                                                 -->
             <!-- ============================================================ -->
-            <section class="bg-gray-50">
-                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div class="flex flex-col lg:flex-row items-center justify-between gap-10 py-12 lg:py-16">
-
-                        <!-- Gauche : texte -->
-                        <div class="flex-1 max-w-xl text-center lg:text-left">
-                            <h1 class="font-bold text-3xl sm:text-4xl text-gray-900">Never Take Notes Again,</h1>
-                            <h1 class="font-bold text-3xl sm:text-4xl text-indigo-600 mt-1">There's an AI for that.</h1>
-                            <h2 class="font-bold text-lg mt-3 bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent">
-                                Try TalkNotes free for 7 days
-                            </h2>
-                            <p class="text-gray-500 text-sm mt-3 leading-relaxed">
-                                Join thousands of professionals who use AI voice transcription
-                                and note-taking to save time, impress colleagues and clients
-                                with organized notes while working smarter, not harder.
-                            </p>
-                            <p class="text-gray-400 text-xs mt-3">Available on Web, iOS and Android</p>
-
-                            <!-- Langues -->
-                            <div class="flex items-center gap-2 mt-3 justify-center lg:justify-start flex-wrap">
-                                <span class="text-gray-600 text-xs font-medium">Works in:</span>
-                                <span class="bg-blue-100 text-xs border border-gray-200 rounded-full px-2 py-0.5">🇬🇧 English</span>
-                                <span class="bg-blue-100 text-xs border border-gray-200 rounded-full px-2 py-0.5">🇪🇸 Spanish</span>
-                                <span class="bg-blue-100 text-xs border border-gray-200 rounded-full px-2 py-0.5">🇫🇷 French</span>
-                                <span class="bg-blue-100 text-xs border border-gray-200 rounded-full px-2 py-0.5">+50</span>
-                            </div>
-
-                            <!-- CTA principal -->
-                            <div class="mt-6">
-                                <a href="#"
-                                    class="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold px-8 py-3.5 rounded-xl text-sm hover:opacity-90 transition-opacity">
-                                    → Try Talknotes Free
-                                </a>
-                            </div>
-                            <p class="text-gray-400 text-xs mt-2 text-center lg:text-left">Trusted by +10,000 happy users</p>
-
-                            <!-- Badges stores -->
-                            <div class="flex items-center gap-3 mt-4 justify-center lg:justify-start flex-wrap">
-                                <a href="#" class="inline-flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 flex-shrink-0">
-                                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                                    </svg>
-                                    <div>
-                                        <p class="text-xs text-gray-400 leading-none">Download on the</p>
-                                        <p class="text-sm font-semibold leading-tight">App Store</p>
-                                    </div>
-                                </a>
-                                <a href="#" class="inline-flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 flex-shrink-0">
-                                        <path d="M3.18 23.76c.35.19.76.2 1.12.04l11.34-6.55-2.43-2.43-10.03 8.94zm-1.79-20.1a1.47 1.47 0 0 0-.39 1.04v15.6c0 .41.14.78.39 1.04l.06.06 8.73-8.73v-.21L1.45 3.6l-.06.06zm18.6 7.54-2.39-1.38-2.7 2.7 2.7 2.69 2.41-1.39a1.39 1.39 0 0 0 0-2.62zM4.3.24C3.94.08 3.53.09 3.18.28L13.65 9.2l-2.43-2.43L4.3.24z"/>
-                                    </svg>
-                                    <div>
-                                        <p class="text-xs text-gray-400 leading-none">Get it on</p>
-                                        <p class="text-sm font-semibold leading-tight">Google Play</p>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <!-- Social proof -->
-                            <div class="flex items-center gap-4 mt-5 justify-center lg:justify-start flex-wrap text-xs text-gray-400">
-                                <span>⭐ 4k+ reviews</span>
-                                <span>·</span>
-                                <span>200k+ users</span>
-                                <span>·</span>
-                                <span>50+ languages</span>
-                            </div>
-                        </div>
-
-                       <div class="flex-shrink-0 w-full max-w-sm mx-auto">
-                            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
-
-                                <p class="text-sm font-semibold text-gray-700 mb-4 text-center">Interactive demo</p>
-
-                                <!-- Zone principale -->
-                                <div class="bg-gray-50 rounded-xl p-5 flex flex-col items-center gap-4 mb-4">
-
-                                    <!-- Cadre texte avec ligne bleue en bas (input simulé) -->
-                                    <div class="w-full bg-white rounded-lg border border-gray-200 px-3 py-2 min-h-[40px]">
-                                        <div class="w-full h-0.5 bg-blue-400 mt-4"></div>
-                                    </div>
-
-                                    <!-- Limit + Timer -->
-                                    <div class="text-center">
-                                        <p class="text-xs text-gray-400 mb-1">Limit: 01:00</p>
-                                        <p class="text-4xl font-bold text-gray-800 tabular-nums tracking-widest">00:00</p>
-                                    </div>
-
-                                    <!-- 3 boutons : play (violet clair), mic (rose/violet), poubelle (gris) -->
-                                    <div class="flex items-center gap-4">
-                                        <!-- Play -->
-                                        <button class="w-11 h-11 rounded-full bg-purple-200 flex items-center justify-center text-purple-500 hover:bg-purple-300 transition-colors">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 ml-0.5">
-                                                <path d="M8 5v14l11-7z"/>
-                                            </svg>
-                                        </button>
-                                        <!-- Mic (principal, plus grand) -->
-                                        <button class="w-14 h-14 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-white shadow-md hover:opacity-90 transition-opacity">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-6 h-6">
-                                                <path d="M12 2a3 3 0 0 1 3 3v7a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <line x1="12" y1="19" x2="12" y2="22" stroke-linecap="round"/>
-                                            </svg>
-                                        </button>
-                                        <!-- Poubelle -->
-                                        <button class="w-11 h-11 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-300 transition-colors">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5">
-                                                <path d="m19 7-.867 12.142A2 2 0 0 1 16.138 21H7.862a2 2 0 0 1-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v3M4 7h16" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                </div>
-
-                                <!-- Bouton Continue -->
-                                <button class="w-full bg-indigo-500 text-white text-sm font-semibold py-2.5 rounded-xl hover:bg-indigo-600 transition-colors mb-3">
-                                    → Continue
-                                </button>
-
-                                <!-- Texte bas -->
-                                <p class="text-center text-xs text-gray-400">
-                                    ↑ Try it out! Click the 🎙 to start recording
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 <!-- Logos presse + flèche (sous la card dans le hero) -->
-                <div class="max-w-2xl mx-auto text-center space-y-4">
-                    <div class="flex items-center justify-center gap-8 flex-wrap text-gray-400">
-                        <!-- Medium -->
-                        <div class="flex items-center gap-1.5 text-sm font-semibold">
-                            <img src="/assets/images/medium.png" alt="Medium" class="w-25">
-                        </div>
-                        <!-- Indie Hackers -->
-                        <div class="flex items-center gap-1.5 text-sm font-semibold">
-                            <img src="/assets/images/IndieHackers.png" alt="Indie Hackers" class="w-25">
-                        </div>
-                        <!-- Foundr -->
-                        <div class="flex items-center gap-1.5 text-sm font-semibold">
-                            <img src="/assets/images/foundr.png" alt="Foundr" class="w-25">
-                        </div>
-                        <!-- Scoop.it -->
-                        <div class="flex items-center gap-1.5 text-sm font-semibold">
-                            <img src="/assets/images/scoopit.png" alt="Scoop.it" class="w-25">
-                        </div>
-                    </div>
-                    <!-- Flèche vers le bas -->
-                    <div class="text-gray-400 text-2xl"><img src="/assets/images/arrow.png" alt="arrow"/></div>
-                </div>
+            <section class="bg-cross-pattern relative overflow-hidden py-16 lg:py-24 font-sans">
+              <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                  <div class="flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-10">
+          
+                      <div class="flex-1 max-w-2xl text-center flex flex-col items-center lg:items-center">
+                          
+                          <div class="flex items-center gap-3 mb-8">
+                              <img src="/assets/images/ph-award.svg" alt="Product Hunt Award" class="h-10">
+                          </div>
+          
+                          <h1 class="font-bold text-4xl sm:text-5xl lg:text-[54px] text-gray-900 leading-[1.15] tracking-tight">
+                              Never Take Notes Again,<br/>
+                              <span class="text-indigo-600">There's an AI for that.</span>
+                          </h1>
+          
+                          <h2 class="font-bold text-xl sm:text-2xl mt-5 bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent">
+                              Try TalkNotes free for 7 days
+                          </h2>
+          
+                          <p class="text-gray-500 text-[15px] sm:text-base mt-5 leading-relaxed max-w-lg">
+                              Join thousands of professionals who use AI voice transcription
+                              and note-taking to save time, impress colleagues and clients
+                              with organized notes while working smarter, not harder.
+                          </p>
+                          <p class="text-gray-400 text-sm mt-3">Available on Web, iOS and Android.</p>
+          
+                          <div class="mt-6 flex flex-col items-center lg:items-start gap-2">
+                              <span class="text-gray-800 text-sm font-bold">Works in:</span>
+                              <div class="flex flex-wrap justify-center lg:justify-start gap-2">
+                                  <span class="bg-indigo-50/50 text-indigo-900 text-[11px] font-semibold px-2.5 py-1.5 rounded-full flex items-center gap-1.5">🇬🇧 English</span>
+                                  <span class="bg-indigo-50/50 text-indigo-900 text-[11px] font-semibold px-2.5 py-1.5 rounded-full flex items-center gap-1.5">🇪🇸 Spanish</span>
+                                  <span class="bg-indigo-50/50 text-indigo-900 text-[11px] font-semibold px-2.5 py-1.5 rounded-full flex items-center gap-1.5">🇫🇷 French</span>
+                                  <span class="bg-indigo-50/50 text-indigo-900 text-[11px] font-semibold px-2.5 py-1.5 rounded-full flex items-center gap-1.5">🇩🇪 German</span>
+                                  <span class="bg-indigo-50/50 text-indigo-900 text-[11px] font-semibold px-2.5 py-1.5 rounded-full flex items-center gap-1.5">🇳🇱 Dutch</span>
+                                  <span class="bg-indigo-50/50 text-indigo-900 text-[11px] font-semibold px-2.5 py-1.5 rounded-full flex items-center gap-1.5">🇵🇹 Portugue...</span>
+                              </div>
+                          </div>
+          
+                          <div class="mt-8 w-full sm:w-auto">
+                              <a href="#" class="inline-flex items-center justify-center w-full sm:w-auto bg-[#D904A2] bg-gradient-to-r from-[#FF0080] to-[#9900FF] text-white font-bold px-10 py-4 rounded-xl text-base hover:opacity-90 transition-all shadow-[0_8px_20px_rgba(217,4,162,0.3)] hover:shadow-[0_12px_25px_rgba(217,4,162,0.4)]">
+                                  → Try TalkNotes free for 7 days
+                              </a>
+                          </div>
+          
+                          <p class="text-gray-400 text-[13px] mt-4 flex items-center justify-center lg:justify-start gap-2">
+                              Trusted by +10,000 happy users 
+                              <span class="text-orange-400 text-[10px] flex gap-0.5">
+                                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                              </span>
+                          </p>
+          
+                          <div class="flex items-center justify-center lg:justify-start gap-4 mt-6">
+                              <a href="#" class="hover:opacity-80 transition-opacity">
+                                  <img src="/assets/images/appstore.png" alt="Download on the App Store" class="h-[42px] w-auto">
+                              </a>
+                              <a href="#" class="hover:opacity-80 transition-opacity">
+                                  <img src="/assets/images/googleplay.png" alt="Get it on Google Play" class="h-[42px] w-auto">
+                              </a>
+                          </div>
+          
+                      </div>
+          
+                      <div class="flex-shrink-0 w-full max-w-md mx-auto lg:mr-0">
+                          <div class="bg-white rounded-[2rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] p-8 sm:p-10 border border-gray-100 flex flex-col items-center relative z-10">
+          
+                              <h3 class="text-lg font-bold text-gray-800 mb-6">Interactive demo</h3>
+          
+                              <div class="w-full bg-[#F3F6FF] rounded-2xl h-[90px] relative mb-8 overflow-hidden">
+                                  <div class="absolute bottom-6 left-6 right-6 h-[2px] bg-blue-500"></div>
+                              </div>
+          
+                              <div class="text-center mb-8">
+                                  <p class="text-[13px] text-gray-400 font-medium mb-1">Limit: 01:00</p>
+                                  <p class="text-[40px] font-bold text-gray-900 leading-none tracking-tight">00:00</p>
+                              </div>
+          
+                              <div class="flex items-center justify-center gap-5 mb-10 w-full">
+                                  <button class="w-14 h-14 rounded-full bg-[#A99EF9] flex items-center justify-center text-white hover:bg-[#8e81f7] transition-colors shadow-sm">
+                                      <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 ml-1"><path d="M8 5v14l11-7z"/></svg>
+                                  </button>
+                                  
+                                  <button class="w-[84px] h-[84px] rounded-full bg-gradient-to-br from-[#FF0080] to-[#9900FF] flex items-center justify-center text-white shadow-[0_8px_20px_rgba(217,4,162,0.3)] hover:scale-105 transition-transform duration-300">
+                                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="w-9 h-9">
+                                          <path d="M12 2a3 3 0 0 1 3 3v7a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <line x1="12" y1="19" x2="12" y2="22" stroke-linecap="round"/>
+                                      </svg>
+                                  </button>
+                                  
+                                  <button class="w-14 h-14 rounded-full bg-[#A99EF9] flex items-center justify-center text-white hover:bg-[#8e81f7] transition-colors shadow-sm">
+                                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-6 h-6">
+                                          <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2M10 11v6M14 11v6" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                  </button>
+                              </div>
+          
+                              <button class="w-full bg-[#A99EF9] text-white font-bold py-3.5 rounded-xl hover:bg-[#8e81f7] transition-colors flex items-center justify-center gap-2 mb-4 text-sm">
+                                  → Continue
+                              </button>
+          
+                              <p class="text-[12px] text-gray-400 font-medium flex items-center justify-center gap-1">
+                                  ↑ Try it out! Click the 
+                                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3 h-3 text-[#A99EF9]">
+                                      <path d="M12 2a3 3 0 0 1 3 3v7a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg> 
+                                  to start recording
+                              </p>
+                          </div>
+                      </div>
+          
+                  </div>
+              </div>
             </section>
              <!-- ============================================================ -->
             <!-- BLOC 3 — WHY CHOSE TAKE NOTE (Features)                             -->
@@ -1250,9 +1209,5 @@
                 }
             }
         </script>
-
-
-
-
     </body>
 </html>
